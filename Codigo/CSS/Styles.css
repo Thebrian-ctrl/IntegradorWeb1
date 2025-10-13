@@ -1,0 +1,31 @@
+
+body{
+    background-image: url("../../Imagenes/Logos/background.jpg");
+    /*Establece el tamaño del fondo al tamño de la pantalla*/
+    background-size: cover;
+    /*Le quito los margenes al body para que los elementos queden al borde*/
+    margin: 0 auto;
+}
+/*flex para acomodar el */
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 black,
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+
+}
+.logo img{
+    margin-top: 100px;
+    max-width: 100%;
+}
