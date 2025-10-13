@@ -1,4 +1,3 @@
-
 body{
     background-image: url("../../Imagenes/Logos/background.jpg");
     /*Establece el tamaño del fondo al tamño de la pantalla*/
@@ -25,7 +24,13 @@ a{
      1px  1px 0 black;
 
 }
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .logo img{
     margin-top: 100px;
-    max-width: 100%;
+    max-width:70%;
 }
