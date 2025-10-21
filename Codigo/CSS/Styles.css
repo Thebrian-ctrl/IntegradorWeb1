@@ -4,6 +4,8 @@ body{
     background-size: cover;
     /*Le quito los margenes al body para que los elementos queden al borde*/
     margin: 0 auto;
+
+    font-family: RefrigeratorDeluxeBold, sans-serif;
 }
 /*flex para acomodar el */
 .menu {
