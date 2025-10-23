@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +14,12 @@
         }
         
         body {
-            background: linear-gradient(180deg, #0b0c10, #1a1d24);
+            /*background: linear-gradient(180deg, #0b0c10, #1a1d24);*/
             font-family: 'Rajdhani', sans-serif;
             color: #fff;
+            background: url("imagenes/fondos/fondo_azul.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
         }
         /* -----NAV MENU */
         
@@ -30,6 +34,7 @@
             top: 0;
             z-index: 1000;
         }
+        
         .logo {
             display: flex;
             align-items: center;
@@ -78,6 +83,7 @@
         .menu a:hover::after {
             width: 100%;
         }
+        
         .icons {
             display: flex;
             align-items: center;
@@ -94,15 +100,100 @@
         .icons i:hover {
             color: #00bfff;
         }
-
+        /*MI TITULO*/
         
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 42px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            color: rgba(20, 22, 30, 0.95);
+        }
+        /*mis contenedores*/
+        /* --- Contenedor principal --- */
+        
+        .contenedor-mapas {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* --- Caja de cada mapa (usa Flexbox en filas) --- */
+        
+        .mapa {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            width: 30%;
+            /* tres columnas en pantallas grandes */
+            min-width: 300px;
+            /* evita que se achique demasiado */
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* --- Hover --- */
+        
+        .mapa:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+        }
+        /* --- Imagen del mapa --- */
+        
+        .mapa img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+        /* --- Título y descripción --- */
+        
+        .mapa h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ffdf00;
+            text-transform: uppercase;
+        }
+        
+        .mapa p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        /* --- Adaptación responsiva --- */
+        
+        @media (max-width: 900px) {
+            .mapa {
+                width: 45%;
+                /* dos columnas en pantallas medianas */
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .mapa {
+                width: 90%;
+                /* una columna en pantallas pequeñas */
+            }
+        }
     </style>
     <script src="https://kit.fontawesome.com/a2d0e6cbf1.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
+
+    <!--MI MENU-->
     <nav>
         <div class="logo">
-           <a href="marvel.html"> <img src="../Imagenes/Logos/Site-logo.png" alt="Logo"></a>
+            <a href="marvel.html"> <img src="../Imagenes/Logos/Site-logo.png" alt="Logo"></a>
         </div>
 
         <div class="menu">
@@ -119,5 +210,61 @@
             <i class="fas fa-bell"></i>
         </div>
     </nav>
+
+
+    <!-- CUERPO DE MIS MAPAS -->
+
+
+    <h1>Mapas del Juego</h1>
+
+
+
+    <div class="contenedor-mapas">
+
+
+        <div class="mapa">
+            <img src="https://www.marvelrivals.com/pc/gw/20241128194803/img/6_977327e9.jpg" alt="Corazon del cielo">
+            <h2>K'un-Lun: Corazon del Cielo</h2>
+            <p>A medida que el <strong> Timestream Entanglement </strong>se extiende por diferentes dimensiones, la mistica ciudad <strong> K'in-Lun </strong>no fue la excepcion.El tiempo transcirre lentamente en esta tierra plagada de antigua arquitectura
+                china, pero algo anda mal.El Dragon Inmortal y protector de la ciudad,<strong> Shou-Lao</strong>, ha caido en un letergo eterno, dejando a K'un-Lun vulnerable y enfrentando conflictos como nunca antes.</p>
+            <p>Con K'un-Lun al borde de la exposicion, el <strong>Doctor Doom</strong> planea apoderarse del Corazon de Shoun-Lao.<strong>Iron Fist </strong>ahora lidera al pueblo para deferder su patria, pero despertar a Shou-Lao conlleva riesgos.</p>
+
+        </div>
+
+        <div class="mapa">
+            <img src="https://www.marvelrivals.com/pc/gw/20241128194803/img/5_407a76f0.jpg" alt="El trono de Knull">
+            <h2>Klyntar: El trono de Knull</h2>
+            <p>Tras el descenso de Fenix al campo de batalla, <strong>Knull</strong> desperto por completo.Sin embargo, ni siquiera el dios de la oscuridad es libre, atado por la fuerza persistente del <strong>Fenix</strong>, <strong>Knull</strong> debe
+                permanecer en su trono, enfrascado en una lucha para consumir la llama abrasadora.</p>
+        </div>
+
+        <div class="mapa">
+            <img src="https://www.marvelrivals.com/pc/gw/20241128194803/img/4_d02459c8.jpg" alt="La cascara celestial">
+            <h2>Klintar Awakens: La Cascara Celestial</h2>
+            <p>Antanio trono, trofeo y simbolo de poder insondable, <strong>Klyntar </strong>ahora flota en silencio, con su creador aprisionado en el nucleo del planeta.Trass la caida del cuerpo en descomposicion del <strong>Celestial</strong>, abatido
+                por <strong> Knull</strong>, la tierra crecio para absorber su antiguo poder. Podras sortear el terreno cambiante y detener al dios oscuro antes de que se apague la luz? Adentrate en el abismo y enfrentate a la oscuridad!!!</p>
+        </div>
+
+        <div class="mapa">
+            <img src="https://www.marvelrivals.com/pc/gw/20241128194803/img/1_623bc550.jpg" alt="Arakko">
+            <h2>Hellfire Gala: Arakko</h2>
+            <p>Mucho antes de ser naciones hermanas en las superficies de planetas vecinos, las islas vivientes conocidas como <strong>Krakoa</strong> y <strong>Arakko</strong> formaban parte de una gigantesca masa continental mutante llamada <strong>Okkara</strong>.Hace
+                miles de anios, <strong>Okkara</strong> se dividio en dos para proteger la <strong>Tierra</strong> de amenazas demoniacas extradimensionales.Incluso cuando el peligro finalmente habia pasado, las dos islas se resistian a volver a unirse.Sin
+                embargo, despues de que <strong>Ultron </strong> asimilara <strong>Arakko</strong> y su poblacion mutante, parecia que la unica manera de purgar el virus y restaurar <strong>Arakko</strong> a su antigua gloria era que las isla infectada
+                se uniera a <strong> Krakoa</strong> y volviera a estar unida.</p>
+        </div>
+
+        <div class="mapa">
+            <img src="https://www.marvelrivals.com/pc/gw/20241128194803/img/3_3799bc77.jpg" alt="Krakoa">
+            <h2>Hellfire Gala: Krakoa</h2>
+            <p>La <strong>Hellfire Gala</strong> 2099 ya esta en marcha, y <strong>Emma Frost</strong> deslumbra con su mejor atuendo, mezclandose con maestria entre el publico.Con invitados entretenidos como esd ebido y los <strong> Mutantes</strong> con
+                la guardia baja, El momento es perfecto para que <strong> Ultron</strong> irrumpa en este evento exclusivo! El Consejo Silencioso debe controlar a estos invasores rebeldes y a sus invitados a salvo. Muevete con gracia y precision por la
+                Gala para detener la inminente infeccion que <strong>Ultron</strong> y sus robots estan propagando. Podras mantener la calma y la elegancia ante el desastre??</p>
+        </div>
+    </div>
+
+
+
 </body>
+
 </html>
