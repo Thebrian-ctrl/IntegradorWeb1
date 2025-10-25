@@ -1,38 +1,244 @@
-body{
-    background-image: url("../../Imagenes/Logos/background.jpg");
-    /*Establece el tamaño del fondo al tamño de la pantalla*/
-    background-size: cover;
-    /*Le quito los margenes al body para que los elementos queden al borde*/
-    margin: 0 auto;
-
-    font-family: RefrigeratorDeluxeBold, sans-serif;
-}
-/*flex para acomodar el */
-.menu {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-}
-
-a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow:
-    -1px -1px 0 black,
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
-
-}
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.logo img{
-    margin-top: 100px;
-    max-width:70%;
-}
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(180deg, #0b0c10, #1a1d24);
+            font-family: 'Rajdhani', sans-serif;
+            color: #fff;
+        }
+        /* -----NAV MENU */
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(20, 22, 30, 0.95);
+            padding: 12px 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        /* LOGO */
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffd700;
+            letter-spacing: 1px;
+        }
+        
+        .logo img {
+            height: 35px;
+        }
+        /* MENU */
+        
+        .menu {
+            display: flex;
+            gap: 35px;
+        }
+        
+        .menu a {
+            color: #cfd3dc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 17px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 3px;
+            background: #00bfff;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+        
+        .menu a:hover {
+            color: #00bfff;
+        }
+        
+        .menu a:hover::after {
+            width: 100%;
+        }
+        /* Iconos del lado derecho */
+        
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        
+        .icons i {
+            font-size: 20px;
+            color: #cfd3dc;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .icons i:hover {
+            color: #00bfff;
+        }
+        /* Sección de ejemplo */
+        
+        section {
+            padding: 30px 40px;
+            text-align: center;
+        }
+        
+        section h1 {
+            font-size: 48px;
+            color: #00bfff;
+            letter-spacing: 2px;
+        }
+        
+        section p {
+            font-size: 20px;
+            color: #cfd3dc;
+            margin-top: 10px;
+        }
+        
+        .carrucelContainer {
+            position: relative;
+            width: 100%;
+            /*antes estaba en 600*/
+            height: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+        .carrucelContainer img {
+            /*  margin-top: 60px;*/
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            /* Para que la imagen cubra el área sin deformarse */
+        }
+        
+        .boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .atras {
+            left: 10px;
+        }
+        
+        .adelante {
+            right: 10px;
+        }
+        
+        .gifi {
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        /** intro*/
+        
+        .intro {
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: center;
+            color: #cfd3dc;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        /*LORE */
+        
+        .historia {
+            background: rgba(20, 22, 30, 0.8);
+            padding: 60px 40px;
+            text-align: center;
+            color: #cfd3dc;
+        }
+        
+        .historia h2 {
+            color: #00bfff;
+            font-size: 32px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .historia p {
+            max-width: 900px;
+            margin: 0 auto 20px auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .historia h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #00bfff;
+            margin: 10px auto 0;
+            border-radius: 3px;
+        }
+        
+        .historia h3 {
+            font-size: 28px;
+            color: #00bfff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .btn-batalla {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, #00bfff, #0077ff);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            animation: brillo 2s infinite ease-in-out;
+            /*animacion de brillo*/
+        }
+        
+        .btn-batalla:hover {
+            background: linear-gradient(90deg, #0077ff, #00bfff);
+            transform: scale(1.08);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.8);
+        }
+        /*  Animación del brillo */
+        
+        @keyframes brillo {
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(0, 191, 255, 0.9);
+            }
+        }
+        /*mi final de pagina*/
+        
+        footer {
+            margin-top: 20px;
+            text-align: center;
+        }
