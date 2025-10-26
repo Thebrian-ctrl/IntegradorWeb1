@@ -1,0 +1,218 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(180deg, #0b0c10, #1a1d24);
+            font-family: 'Rajdhani', sans-serif;
+            color: #fff;
+        }
+        /* -----NAV MENU */
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(20, 22, 30, 0.95);
+            padding: 12px 40px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        /* LOGO */
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffd700;
+            letter-spacing: 1px;
+        }
+        
+        .logo img {
+            height: 35px;
+        }
+        /* MENU */
+        
+        .menu {
+            display: flex;
+            gap: 35px;
+        }
+        
+        .menu a {
+            color: #cfd3dc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 17px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .menu a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 0%;
+            height: 3px;
+            background: #00bfff;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+        
+        .menu a:hover {
+            color: #00bfff;
+        }
+        
+        .menu a:hover::after {
+            width: 100%;
+        }
+        /* Iconos del lado derecho */
+        
+        .icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        
+        .icons i {
+            font-size: 20px;
+            color: #cfd3dc;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .icons i:hover {
+            color: #00bfff;
+        }
+
+        
+        p {
+            text-align: center;
+        }
+
+        h1, a {
+            color: #00bfff;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        fieldset {
+            border-radius: 15px;
+            padding: 30px;
+            border: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0; 
+            width: 400px;
+            height: 600px; 
+            
+        }
+
+
+        .form-control {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 20px; 
+            width: 100%; 
+        }
+
+        .form-control label {
+            margin-bottom: 5px; 
+        }
+
+        .form-control input[type="text"], 
+        .form-control input[type="email"], 
+        .form-control input[type="password"] {
+            height: 40px;
+            width: 350px; 
+            padding: 0 10px;
+            background-color: #1a1d24;
+            border: 1px solid gray;
+            border-radius: 8px;
+            color: white;
+        }
+
+
+        .form-control input:focus { 
+            outline: none;
+            border-color: #00bfff; 
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            justify-content: flex-start;
+            padding-left: 25px;
+        }
+
+        input[type="checkbox"] {
+            accent-color: #00bfff;
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+
+        input[type="submit"] {
+            width: 200px;
+            height: 40px;
+            background: linear-gradient(90deg, #00bfff, #0077ff);
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.6);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+            animation: brillo 2s infinite ease-in-out;
+        }
+
+        .boton {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .form-control p {           
+            height: 0; 
+            overflow: hidden;
+            margin: 0;
+            font-size: 0.8rem;
+            color: red;
+            transition: height 0.3s ease;
+        }
+
+        .form-control.falla input {
+            border: 1px solid red;
+        }
+
+        .form-control.ok input {
+            border: 1px solid aquamarine;
+        }
+
+
+        .form-control.falla p {
+            height: 15px; 
+            margin-top: 5px; 
+            text-align: left;
+        }
