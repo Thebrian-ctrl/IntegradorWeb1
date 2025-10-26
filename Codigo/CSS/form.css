@@ -110,6 +110,9 @@
             border-radius: 15px;
             padding: 30px;
             border: 0;
+            display: flex;
+            justify-content: center;
+            
         }
 
         form {
@@ -117,9 +120,8 @@
             flex-direction: column;
             align-items: center;
             gap: 0; 
-            width: 400px;
-            height: 600px; 
-            
+            width: 350px;
+            height: 600px;            
         }
 
 
