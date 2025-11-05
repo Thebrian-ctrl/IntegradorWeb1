@@ -100,19 +100,60 @@
             color: #00bfff;
         }
 
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .carrucelContainer {
+            position: relative;
+            width: 100%;
+            /*antes estaba en 600*/
+            height: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        
+
+        .carrucelContainer img {
+            /*  margin-top: 60px;*/
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            /* Para que la imagen cubra el área sin deformarse */
         }
 
-        fieldset {
-            border-radius: 15px;
-            padding: 30px;
-            border: 0;
+        .atras {
+            left: 10px;
+        }
+        
+        .adelante {
+            right: 10px;
+        }
+
+        .boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: white;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .registro-container {
             display: flex;
             justify-content: center;
-            
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .form-container {
+            flex: 1;
+            max-width: 500px;
+            min-width: 320px;
         }
 
         form {
@@ -188,12 +229,13 @@
             animation: brillo 2s infinite ease-in-out;
         }
 
-        .boton {
+        .boton-form {
             display: flex;
             justify-content: center;
             width: 100%;
             margin-top: 10px;
         }
+        
 
         .form-control p {           
             height: 0; 
@@ -217,4 +259,30 @@
             height: 15px; 
             margin-top: 5px; 
             text-align: left;
+        }
+        .informacion{
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .informacion img{
+            width: 100%;
+        }
+
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .propuesta-valor {
+            margin-top: 20px;
+            color: #eee;
+        }
+        .propuesta-valor li{
+            padding-left: 10px;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
         }

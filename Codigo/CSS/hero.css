@@ -182,24 +182,30 @@
         
         .capitan {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../imagenes/fondosheroe/fondo_capitanamerica");
+            border-radius: 10px;
         }
         
         .hawkeye {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../imagenes/fondosheroe/fondo_hawkaye");
+            border-radius: 10px;
         }
         
         .hulk {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../imagenes/fondosheroe/fondo_hulk");
+            border-radius: 10px;
         }
         
         .ironman {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../imagenes/fondosheroe/iroman_fondo");
+            border-radius: 10px;
         }
         
         .blackwidow {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../imagenes/fondosheroe/fondo_blackwidow");
+            border-radius: 10px;
         }
         
         .thor {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../imagenes/fondosheroe/thor_fondo");
+            border-radius: 10px;
         }

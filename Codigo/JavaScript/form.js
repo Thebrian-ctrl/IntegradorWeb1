@@ -15,13 +15,13 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
         formControl.className = 'form-control falla';
     };
 
-    // Función para manejar la validación exitosa 
+    // Funcion para manejar la validacion exitosa 
     const validacionOk = (input) => {
         const formControl = input.parentElement;
         formControl.className = 'form-control ok';
     };
 
-    // Función de validación de Email 
+    // Función de validacion de Email 
     const emailValida = (email) => { 
         return /^.+@.+\..{2,}$/.test(email);
     };
@@ -31,7 +31,7 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
         return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9_-]{6,20}$/.test(usuario);
     };
     
-    //  FUNCIÓN PRINCIPAL DE VALIDACIÓN 
+    //  FUNCIÓN PRINCIPAL DE VALIDACIoN 
     const validacion = () => {
         const nombreValor = nombre.value.trim();
         const emailValor = email.value.trim();
@@ -39,17 +39,17 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
         const contraseñaValor = contraseña.value.trim();
         const confirmarValor = confirmar.value.trim();
         
-        // Expresión regular para la contraseña (al menos 8, mayús, minús, número, especial)
-        const contraExpresion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$/;
+        // Expresión regular para la contraseña (al menos 8, mayus, minus, numero)
+        const contraExpresion = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9]{8,20}$/;
 
-        //  Validación de nombre
+        //  Validacion de nombre
         if (!nombreValor) {
             validacionFalla(nombre, 'Campo vacio');
         } else {
             validacionOk(nombre);
         }
 
-        //  Validación de email
+        //  Validacion de email
         if (!emailValor) {
             validacionFalla(email, 'Campo vacio');
         } else if (!emailValida(emailValor)) {
@@ -58,26 +58,26 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
             validacionOk(email);
         }
 
-        //  Validación de usuario
+        //  Validacion de usuario
         if (!usuarioValor) {
             validacionFalla(usuario, 'Campo vacio'); 
         } else if (!validaUsuario(usuarioValor)) { 
-            validacionFalla(usuario, 'Debe contener mayúsculas, minúsculas, números y tener entre 6 y 20 caracteres.'); 
+            validacionFalla(usuario, 'Debe contener mayus, minus, numeros y tener entre 6 y 20 caracteres.'); 
         } else {
             validacionOk(usuario);
         }
 
-        //  Validación de contraseña
+        //  Validacion de contraseña
         if (!contraseñaValor) { 
             validacionFalla(contraseña, 'Campo vacio');
         }       
         else if (!contraseñaValor.match(contraExpresion)) {
-            validacionFalla(contraseña, 'Debe contener 8-20 caracteres, mayúscula, minúscula, número y un caracter especial.');
+            validacionFalla(contraseña, 'Debe contener 8-20 caracteres, mayúscula, minús y un número.');
         } else {
             validacionOk(contraseña);
         }
 
-        //  Validación de confirmación
+        //  Validacion de confirmación
         if (!confirmarValor) {
             validacionFalla(confirmar, 'Confirme su contraseña');
         } else if (contraseñaValor !== confirmarValor) {

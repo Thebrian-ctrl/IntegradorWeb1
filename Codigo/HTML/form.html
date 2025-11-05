@@ -14,7 +14,7 @@
         </div>
 
         <div class="menu">
-            <a href="#">Inicio</a>
+            <a href="index.html">Inicio</a>
             <a href="hero.html">Personajes</a>
             <a href="maps.html">Mapas</a>
             <a href="#">Modos de Juego</a>
@@ -27,10 +27,24 @@
             <i class="fas fa-bell"></i>
         </div>
     </nav>
+    
+    <section>
+        <div class="carrucelContainer">
+            <!-- <h2>Momentos de nuestros jugadores</h2>-->
+            <div class="atras boton">&#60;</div>
+            <div class="adelante boton">&#62;</div>
+            <img src="../../imagenes/carrusel/img1.jpg" alt="Imagen del carrusel" id="imagen">
 
-    <p>Unete a la batalla junto a otros miles de jugadores en los torneos 6 VS 6 donde cada jugador desempeña un rol fundamental para conseguir la victoria.</p>
+        </div>
+
+
+
+    </section>
+
+    <main class="registro-container">
+
     <div class="form-container">
-    <fieldset>
+    
         <form action="#" method="POST" id="formulario">
             <h1>Registrarse</h1>
 
@@ -69,12 +83,55 @@
                 <label for="terms"> Acepto los <a href="https://protocol.unisdk.easebar.com/release/latest_v475.html" target="_blank">Términos y condiciones</a></label>
             </div>
 
-            <div class="boton">
+            <div class="boton-form">
                 <input type="submit" value="Unirse a la batalla">
             </div>
         </form>
-    </fieldset>
+    </div>
+
+    <div class="trailer-container">
+        <h2>Prepárate para la batalla</h2>
+        
+        <div class="video-responsive">
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/-b0veB7q9P4?si=VQDd6Ji6fUBfe3Fw" 
+                title="Marvel Rivals Trailer" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="propuesta-valor">
+            <h3>¿Por qué registrarse?</h3>
+            <ul>
+                <li>Accede a la beta y a pruebas de juego futuras.</li>
+                <li>Sé el primero en enterarte de nuevos héroes y mapas.</li>
+                <li>Gana recompensas exclusivas en el juego.</li>
+            </ul>
+        </div>
+    </div>
+        
+    </main>  
+
+    <footer>
+        <div class="fotter-info">
+            <div class="logos">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+            <div class="terminos">
+                <p>©2025 MARVEL</p>
+                <p>©1997-2025 NetEase,Inc. All Rights Reserved</p>
+            </div>
+        </div>
+        
+    </footer>
 </div>
+    <script src="../JavaScript/carrousel.js"></script>
     <script src="../JavaScript/form.js"></script>
+
 </body>
 </html>
