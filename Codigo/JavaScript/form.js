@@ -21,12 +21,12 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
         formControl.className = 'form-control ok';
     };
 
-    // Función de validacion de Email 
+    // extpresion regular Función de validacion de Email 
     const emailValida = (email) => { 
         return /^.+@.+\..{2,}$/.test(email);
     };
 
-    // Función de validación de Usuario 
+    // expresion regular de validación de Usuario 
     const validaUsuario = (usuario) => {
         return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9_-]{6,20}$/.test(usuario);
     };
@@ -34,7 +34,7 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
     
 
 
-    //  FUNCIÓN PRINCIPAL DE VALIDACIoN 
+    //  FUNCION PRINCIPAL DE VALIDACIoN 
     const validacion = () => {
         const nombreValor = nombre.value.trim();
         const emailValor = email.value.trim();
@@ -80,7 +80,7 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
             validacionOk(contraseña);
         }
 
-        //  Validacion de confirmación
+        //  Validacion de confirmación de contraseña
         if (!confirmarValor) {
             validacionFalla(confirmar, 'Confirme su contraseña');
         } else if (contraseñaValor !== confirmarValor) {
@@ -91,10 +91,43 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
     };
 
 
+    const esFormularioValido = () => {
+        const totalCampos = formulario.querySelectorAll('.form-control').length
+
+        const camposOk = formulario.querySelectorAll('.form-control.ok').length
+
+        return totalCampos === camposOk
+    }
 
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
         validacion();
-    });
 
-}); 
+        if(esFormularioValido()){
+            const mensajePrevio = formulario.parentElement.querySelector('.mensaje-exito')
+
+            if(mensajePrevio) {
+                mensajePrevio.remove();
+            }
+            
+            const nombreValor = nombre.value;
+            const emailValor = email.value;
+            const usuarioValor = usuario.value;
+
+            const mensajeExito = document.createElement('div')
+            mensajeExito.classList.add('mensaje-exito');
+
+            mensajeExito.innerHTML = `
+                <h4>¡Registro Exitoso!</h4>
+                <p>Datos enviados:</p>
+                <ul>
+                    <li><strong>Nombre:</strong> ${nombreValor}</li>
+                    <li><strong>Email:</strong> ${emailValor}</li>
+                    <li><strong>Usuario:</strong> ${usuarioValor}</li>
+                </ul>
+            `;
+
+            formulario.parentElement.appendChild(mensajeExito)
+    }
+        })
+    });
