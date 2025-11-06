@@ -31,6 +31,9 @@ window.addEventListener('load', () => { // Se agrega la función de inicio
         return /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[a-zA-Z0-9_-]{6,20}$/.test(usuario);
     };
     
+    
+
+
     //  FUNCIÓN PRINCIPAL DE VALIDACIoN 
     const validacion = () => {
         const nombreValor = nombre.value.trim();
