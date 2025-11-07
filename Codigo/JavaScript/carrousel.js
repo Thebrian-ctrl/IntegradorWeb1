@@ -1,8 +1,8 @@
 let imagenes = [
-    "../../Imagenes/carrusel/img1.jpg",
-    "../../Imagenes/carrusel/img2.webp",
-    "../../Imagenes/carrusel/img3.jpg",
-    "../../Imagenes/carrusel/img4.webp"
+    "Imagenes/carrusel/img1.jpg",
+    "Imagenes/carrusel/img2.webp",
+    "Imagenes/carrusel/img3.jpg",
+    "Imagenes/carrusel/img4.webp"
 ];
 let cont = 0;
 
