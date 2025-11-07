@@ -102,7 +102,7 @@ nav {
     padding: 40px;
     color: #fff;
     /* background-color: #0c0d10;*/
-    background-image: url("/Imagenes/fondos/fondo_gris.jpg");
+    background-image: url("../../Imagenes/fondos/fondo_gris.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
