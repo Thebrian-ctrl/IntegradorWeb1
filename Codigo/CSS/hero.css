@@ -190,32 +190,32 @@ nav {
 /*fondos para cada heroe*/
 
 .capitan {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_capitanamerica");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_capitanamerica.png");
     border-radius: 10px;
 }
 
 .hawkeye {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_hawkaye");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_hawkaye.png");
     border-radius: 10px;
 }
 
 .hulk {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_hulk");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_hulk.png");
     border-radius: 10px;
 }
 
 .ironman {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/iroman_fondo");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/iroman_fondo.png");
     border-radius: 10px;
 }
 
 .blackwidow {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_blackwidow");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/fondo_blackwidow.png");
     border-radius: 10px;
 }
 
 .thor {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/thor_fondo");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../Imagenes/fondosheroe/thor_fondo.png");
     border-radius: 10px;
 }
 
